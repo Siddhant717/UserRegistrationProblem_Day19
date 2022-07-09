@@ -6,8 +6,8 @@ namespace UserRegistrationProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Password should have minimum 8 characters and atleast 1 UpperCase -");
-            UserRegistration.Check_Password_Atleast_1_UpperCase();
+            Console.WriteLine("Password should have minimum 8 characters with atleast 1 UpperCase and 1 numeric number -");
+            UserRegistration.CheckUserPassword();
         }
     }
 }
