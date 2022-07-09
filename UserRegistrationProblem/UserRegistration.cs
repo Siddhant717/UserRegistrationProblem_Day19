@@ -9,21 +9,21 @@ namespace UserRegistrationProblem
 {
     public class UserRegistration
     {
-        public static void CheckLastName()
+        public static void CheckEmail()
         {
-            Console.WriteLine("Enter your Last Name- ");
-            string lastname = Console.ReadLine();
-            string lastnamepattern = @"^[A-Z]{1}[a-z]{2,}$";
-            Regex lastnameregex = new Regex(lastnamepattern);
+            Console.WriteLine("Enter your Email- ");
+            string Email = Console.ReadLine();
+            string emailpattern = @"^([A-Za-z]{3,}([.a-z]*)@[a-z]{2,}[.][a-z]{2,3}([.a-z]*))$";
+            Regex EmailRegex = new Regex(emailpattern);
            
-            var Result = lastnameregex.IsMatch(lastname);
+            var Result = EmailRegex.IsMatch(Email);
             if(Result==true)
             {
-                Console.WriteLine("Last Name is valid");
+                Console.WriteLine("Email is valid");
             }
             else
             {
-                Console.WriteLine("Please Enter Valid Last Name");
+                Console.WriteLine("Please Enter Valid Email");
             }
 
 
