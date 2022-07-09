@@ -9,21 +9,21 @@ namespace UserRegistrationProblem
 {
     public class UserRegistration
     {
-        public static void CheckEmail()
+        public static void CheckMobileNumber()
         {
-            Console.WriteLine("Enter your Email- ");
-            string Email = Console.ReadLine();
-            string emailpattern = @"^([A-Za-z]{3,}([.a-z]*)@[a-z]{2,}[.][a-z]{2,3}([.a-z]*))$";
-            Regex EmailRegex = new Regex(emailpattern);
+            Console.WriteLine("Enter your Mobile Number- ");
+            string MobileNumber = Console.ReadLine();
+            string MobileNumberPattern = @"^[1-9]{2,}[' '][7-9]{1}[0-9]{9}$";
+            Regex MobileNumberRegex = new Regex(MobileNumberPattern);
            
-            var Result = EmailRegex.IsMatch(Email);
+            var Result = MobileNumberRegex.IsMatch(MobileNumber);
             if(Result==true)
             {
-                Console.WriteLine("Email is valid");
+                Console.WriteLine("Mobile Number is valid");
             }
             else
             {
-                Console.WriteLine("Please Enter Valid Email");
+                Console.WriteLine("Please Enter Valid Mobile Number");
             }
 
 

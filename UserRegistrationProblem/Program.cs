@@ -6,7 +6,7 @@ namespace UserRegistrationProblem
     {
         static void Main(string[] args)
         {
-            UserRegistration.CheckEmail();
+            UserRegistration.CheckMobileNumber();
         }
     }
 }
