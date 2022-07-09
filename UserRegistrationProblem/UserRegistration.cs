@@ -9,11 +9,11 @@ namespace UserRegistrationProblem
 {
     public class UserRegistration
     {
-        public static void CheckUserPassword()
+        public static void Check_Password_Atleast_1_UpperCase()
         {
             Console.WriteLine("Enter your Password- ");
             string Password = Console.ReadLine();
-            string PasswordPattern = @"^[a-zA-Z]{8,}$"; 
+            string PasswordPattern = @"^(?=.*[A-Z])[a-zA-Z]{8,}$";
             Regex PasswordPatternRegex = new Regex(PasswordPattern);
            
             var Result = PasswordPatternRegex.IsMatch(Password);
