@@ -9,21 +9,21 @@ namespace UserRegistrationProblem
 {
     public class UserRegistration
     {
-        public static void CheckFirstName()
+        public static void CheckLastName()
         {
-            Console.WriteLine("Enter your First Name- ");
-            string firstname = Console.ReadLine();
-            string firstnamepattern = @"^[A-Z]{1}[a-z]{2,}$";
-            Regex firstnameregex = new Regex(firstnamepattern);
+            Console.WriteLine("Enter your Last Name- ");
+            string lastname = Console.ReadLine();
+            string lastnamepattern = @"^[A-Z]{1}[a-z]{2,}$";
+            Regex lastnameregex = new Regex(lastnamepattern);
            
-            var Result = firstnameregex.IsMatch(firstname);
+            var Result = lastnameregex.IsMatch(lastname);
             if(Result==true)
             {
-                Console.WriteLine("First Name is valid");
+                Console.WriteLine("Last Name is valid");
             }
             else
             {
-                Console.WriteLine("Please Enter Valid First Name");
+                Console.WriteLine("Please Enter Valid Last Name");
             }
 
 
