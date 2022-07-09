@@ -9,22 +9,22 @@ namespace UserRegistrationProblem
 {
     public class UserRegistration
     {
-        // Checking the Password that should have min 8 characters with atleast 1 UpperCase,1 Numeric Number & 1 SpecialCharacter
-        public static void CheckUserPassword()
+       
+        public static void CheckEmailSample()
         {
-            Console.WriteLine("Enter your Password- ");
-            string Password = Console.ReadLine();
-            string PasswordPattern = @"^(?=.*[A-Z])(?=.*[@#$!%^&-+=()])(?=.*[0-9])(?=.*[a-z]).{8,}$";
-            Regex PasswordPatternRegex = new Regex(PasswordPattern);
+            Console.WriteLine("Enter Email- ");
+            string Email = Console.ReadLine();
+            string EmailPattern = @"^([a-z]{3}([\.\+\-0-9]*)@[a-z0-9]{1,}.[a-z]{3,}[.a-z]*)";
+            Regex EmailPatternRegex = new Regex(EmailPattern);
            
-            var Result = PasswordPatternRegex.IsMatch(Password);
+            var Result = EmailPatternRegex.IsMatch(Email);
             if(Result==true)
             {
-                Console.WriteLine("Entered Password is valid");
+                Console.WriteLine("Email Sample is valid");
             }
             else
             {
-                Console.WriteLine("Please Enter Valid Password");
+                Console.WriteLine("Email Sample is not valid");
             }
 
 
