@@ -9,21 +9,21 @@ namespace UserRegistrationProblem
 {
     public class UserRegistration
     {
-        public static void CheckMobileNumber()
+        public static void CheckUserPassword()
         {
-            Console.WriteLine("Enter your Mobile Number- ");
-            string MobileNumber = Console.ReadLine();
-            string MobileNumberPattern = @"^[1-9]{2,}[' '][7-9]{1}[0-9]{9}$";
-            Regex MobileNumberRegex = new Regex(MobileNumberPattern);
+            Console.WriteLine("Enter your Password- ");
+            string Password = Console.ReadLine();
+            string PasswordPattern = @"^[a-zA-Z]{8,}$"; 
+            Regex PasswordPatternRegex = new Regex(PasswordPattern);
            
-            var Result = MobileNumberRegex.IsMatch(MobileNumber);
+            var Result = PasswordPatternRegex.IsMatch(Password);
             if(Result==true)
             {
-                Console.WriteLine("Mobile Number is valid");
+                Console.WriteLine("Entered Password is valid");
             }
             else
             {
-                Console.WriteLine("Please Enter Valid Mobile Number");
+                Console.WriteLine("Please Enter Valid Password");
             }
 
 

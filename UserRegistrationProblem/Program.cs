@@ -2,11 +2,12 @@
 
 namespace UserRegistrationProblem
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            UserRegistration.CheckMobileNumber();
+            Console.WriteLine("Password should have minimum 8 characters -");
+            UserRegistration.CheckUserPassword();
         }
     }
 }
